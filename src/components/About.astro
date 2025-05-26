@@ -1,0 +1,249 @@
+---
+const skills = [
+  "Software Architecture",
+  "Full-Stack Development",
+  "Agile Methodologies",
+  "DevOps Practices",
+  "Cloud Infrastructure",
+  "Technical Leadership",
+  "Team Mentoring",
+  "Code Reviews"
+];
+
+const experiences = [
+  {
+    title: "Lead Software Consultant",
+    company: "Tech Innovations Inc.",
+    period: "2019 - Present",
+    description: "Leading technical teams and delivering enterprise solutions for Fortune 500 clients. Specializing in architecture modernization and team upskilling."
+  },
+  {
+    title: "Senior Software Engineer",
+    company: "Digital Solutions Co.",
+    period: "2015 - 2019",
+    description: "Developed scalable cloud-native applications and led agile transformations for mid-size companies across finance and healthcare sectors."
+  },
+  {
+    title: "Software Developer",
+    company: "WebTech Labs",
+    period: "2012 - 2015",
+    description: "Built responsive web applications and e-commerce platforms using modern JavaScript frameworks and backend technologies."
+  }
+];
+---
+
+<section id="about" class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image animate-on-scroll">
+        <img 
+          src="https://images.pexels.com/photos/5989925/pexels-photo-5989925.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+          alt="Jane Doe, Software Consultant" 
+          width="500" 
+          height="600"
+        />
+      </div>
+      
+      <div class="about-content">
+        <div class="section-header animate-on-scroll">
+          <h2>About Me</h2>
+        </div>
+        
+        <div class="bio animate-on-scroll delay-100">
+          <p>
+            Hello! I'm Jane Doe, a passionate software consultant with over 10 years of experience in building robust, scalable applications and leading high-performing technical teams.
+          </p>
+          <p>
+            My mission is to help organizations deliver exceptional software that meets business objectives while maintaining technical excellence. I believe in pragmatic solutions, clean code, and empowering development teams.
+          </p>
+          <p>
+            When I'm not writing code or designing architectures, you can find me speaking at tech conferences, contributing to open-source projects, or mentoring upcoming developers.
+          </p>
+        </div>
+        
+        <div class="skills animate-on-scroll delay-200">
+          <h3>Skills & Expertise</h3>
+          <div class="skills-tags">
+            {skills.map(skill => (
+              <span class="skill-tag">{skill}</span>
+            ))}
+          </div>
+        </div>
+        
+        <div class="experience animate-on-scroll delay-300">
+          <h3>Experience</h3>
+          <div class="timeline">
+            {experiences.map(exp => (
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <h4>{exp.title}</h4>
+                  <div class="timeline-info">
+                    <span class="company">{exp.company}</span>
+                    <span class="period">{exp.period}</span>
+                  </div>
+                  <p>{exp.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background-color: var(--neutral-50);
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-12);
+    align-items: start;
+  }
+  
+  .about-image {
+    position: sticky;
+    top: 100px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    transition: transform var(--transition-normal) ease;
+  }
+  
+  .about-image:hover img {
+    transform: scale(1.02);
+  }
+  
+  .about-content .section-header {
+    text-align: left;
+    margin-bottom: var(--space-6);
+  }
+  
+  .about-content h2::after {
+    left: 0;
+    transform: none;
+  }
+  
+  .bio {
+    margin-bottom: var(--space-8);
+  }
+  
+  .bio p {
+    margin-bottom: var(--space-4);
+    color: var(--neutral-700);
+  }
+  
+  .skills {
+    margin-bottom: var(--space-8);
+  }
+  
+  h3 {
+    margin-bottom: var(--space-4);
+    color: var(--neutral-800);
+  }
+  
+  .skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+  
+  .skill-tag {
+    background-color: var(--primary-50);
+    color: var(--primary-700);
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all var(--transition-fast) ease;
+  }
+  
+  .skill-tag:hover {
+    background-color: var(--primary-100);
+    transform: translateY(-2px);
+  }
+  
+  .timeline {
+    position: relative;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    width: 2px;
+    background-color: var(--neutral-300);
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding-left: var(--space-10);
+    margin-bottom: var(--space-6);
+  }
+  
+  .timeline-marker {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-500), var(--secondary-500));
+    border: 3px solid white;
+    box-shadow: var(--shadow-sm);
+    z-index: 1;
+  }
+  
+  .timeline-content h4 {
+    margin-bottom: var(--space-2);
+    color: var(--neutral-900);
+    font-size: 1.125rem;
+  }
+  
+  .timeline-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-2);
+    font-size: 0.875rem;
+  }
+  
+  .company {
+    color: var(--primary-600);
+    font-weight: 500;
+  }
+  
+  .period {
+    color: var(--neutral-500);
+  }
+  
+  @media (max-width: 1024px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+    
+    .about-image {
+      position: relative;
+      top: 0;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .timeline-info {
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+  }
+</style>

@@ -1,0 +1,218 @@
+---
+const services = [
+  {
+    title: "Technical Coaching",
+    description: "Elevate your development team's skills through hands-on mentoring, code reviews, and tailored workshops.",
+    icon: "👨‍🏫",
+    benefits: ["Improved code quality", "Faster onboarding", "Better technical decisions", "Enhanced team collaboration"]
+  },
+  {
+    title: "Software Delivery",
+    description: "End-to-end implementation of complex software solutions with a focus on quality and maintainability.",
+    icon: "🚀",
+    benefits: ["Reliable, tested code", "Clean architecture", "On-time delivery", "Transparent process"]
+  },
+  {
+    title: "Architecture Design",
+    description: "Create robust, scalable software architectures that align with your business goals and technical requirements.",
+    icon: "🏛️",
+    benefits: ["Future-proof solutions", "Scalable systems", "Reduced technical debt", "Clear documentation"]
+  }
+];
+---
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <h2>Services</h2>
+      <p class="section-description">Comprehensive software consulting services tailored to your unique challenges and goals.</p>
+    </div>
+    
+    <div class="services-grid">
+      {services.map((service, index) => (
+        <div class={`service-card animate-on-scroll delay-${index * 100}`}>
+          <div class="icon">{service.icon}</div>
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+          <ul class="benefits">
+            {service.benefits.map((benefit) => (
+              <li>{benefit}</li>
+            ))}
+          </ul>
+          <a href="#contact" class="learn-more">Learn more</a>
+        </div>
+      ))}
+    </div>
+    
+    <div class="custom-solutions animate-on-scroll">
+      <div class="custom-content">
+        <h3>Need a custom solution?</h3>
+        <p>Every business has unique challenges. We offer tailored consulting packages to address your specific needs.</p>
+      </div>
+      <a href="#contact" class="btn">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    background-color: white;
+    position: relative;
+  }
+  
+  .section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--space-12);
+  }
+  
+  h2 {
+    color: var(--neutral-900);
+    margin-bottom: var(--space-4);
+    position: relative;
+    display: inline-block;
+  }
+  
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-500), var(--secondary-500));
+    border-radius: var(--radius-full);
+  }
+  
+  .section-description {
+    color: var(--neutral-600);
+    font-size: 1.125rem;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+    margin-bottom: var(--space-16);
+  }
+  
+  .service-card {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal) ease, box-shadow var(--transition-normal) ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--neutral-200);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-500), var(--secondary-500));
+    opacity: 0;
+    transition: opacity var(--transition-normal) ease;
+  }
+  
+  .service-card:hover::before {
+    opacity: 1;
+  }
+  
+  .icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-4);
+  }
+  
+  h3 {
+    color: var(--neutral-900);
+    margin-bottom: var(--space-3);
+  }
+  
+  .service-card p {
+    color: var(--neutral-600);
+    margin-bottom: var(--space-4);
+  }
+  
+  .benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-6);
+  }
+  
+  .benefits li {
+    padding-left: var(--space-6);
+    position: relative;
+    margin-bottom: var(--space-2);
+    color: var(--neutral-700);
+  }
+  
+  .benefits li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-500);
+    font-weight: bold;
+  }
+  
+  .learn-more {
+    color: var(--primary-600);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: transform var(--transition-fast) ease;
+  }
+  
+  .learn-more:hover {
+    transform: translateX(5px);
+  }
+  
+  .custom-solutions {
+    background-color: var(--primary-50);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+  }
+  
+  .custom-content {
+    max-width: 600px;
+  }
+  
+  .custom-solutions h3 {
+    margin-bottom: var(--space-2);
+  }
+  
+  .custom-solutions p {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+    }
+    
+    .custom-solutions {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .custom-solutions .btn {
+      width: 100%;
+    }
+  }
+</style>

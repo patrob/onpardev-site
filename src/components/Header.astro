@@ -1,0 +1,259 @@
+---
+---
+
+<header id="header">
+  <div class="container">
+    <div class="header-content">
+      <a href="#" class="logo">
+        <span class="name">On PAR Dev</span>
+        <span class="title">Software Consultants</span>
+      </a>
+      
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact" class="btn">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+  
+  <div class="mobile-nav">
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact" class="btn">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Header scroll behavior
+  const header = document.getElementById('header');
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+  
+  // Handle header background on scroll
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+  
+  // Mobile menu toggle
+  mobileMenuToggle.addEventListener('click', () => {
+    mobileMenuToggle.classList.toggle('active');
+    mobileNav.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+  });
+  
+  // Close mobile menu when clicking on a link
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenuToggle.classList.remove('active');
+      mobileNav.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    });
+  });
+</script>
+
+<style>
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color var(--transition-normal), box-shadow var(--transition-normal);
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+  
+  header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+    color: var(--neutral-900);
+    text-decoration: none;
+    transition: transform var(--transition-fast) ease;
+  }
+  
+  .logo:hover {
+    transform: translateY(-2px);
+  }
+  
+  .logo .name {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  
+  .logo .title {
+    font-size: 0.875rem;
+    color: var(--neutral-600);
+  }
+  
+  .desktop-nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: var(--space-6);
+  }
+  
+  .desktop-nav a {
+    color: var(--neutral-800);
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .desktop-nav a:not(.btn)::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-600);
+    transition: width var(--transition-normal) ease;
+  }
+  
+  .desktop-nav a:not(.btn):hover {
+    color: var(--primary-600);
+  }
+  
+  .desktop-nav a:not(.btn):hover::after {
+    width: 100%;
+  }
+  
+  .desktop-nav .btn {
+    padding: var(--space-2) var(--space-4);
+  }
+  
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .mobile-menu-toggle span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: var(--neutral-800);
+    border-radius: 2px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  }
+  
+  .mobile-menu-toggle span:nth-child(1) {
+    top: 0px;
+  }
+  
+  .mobile-menu-toggle span:nth-child(2) {
+    top: 10px;
+  }
+  
+  .mobile-menu-toggle span:nth-child(3) {
+    top: 20px;
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
+  }
+  
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right var(--transition-normal) ease;
+    padding: var(--space-8);
+  }
+  
+  .mobile-nav.active {
+    right: 0;
+  }
+  
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    text-align: center;
+  }
+  
+  .mobile-nav a {
+    color: var(--neutral-800);
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .mobile-nav .btn {
+    margin-top: var(--space-4);
+    width: 100%;
+  }
+  
+  body.menu-open {
+    overflow: hidden;
+  }
+  
+  @media (max-width: 768px) {
+    .desktop-nav {
+      display: none;
+    }
+    
+    .mobile-menu-toggle {
+      display: block;
+    }
+  }
+</style>

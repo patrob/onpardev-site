@@ -1,0 +1,184 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="logo">
+          <span class="name">On PAR Dev</span>
+          <span class="title">Software Consultants</span>
+        </div>
+        <p>Delivering exceptional software solutions and empowering development teams.</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Technical Coaching</a></li>
+            <li><a href="#services">Software Delivery</a></li>
+            <li><a href="#services">Architecture Design</a></li>
+          </ul>
+        </div>
+        
+        <div class="link-group">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#about">Experience</a></li>
+            <li><a href="#work">Case Studies</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="link-group">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="mailto:hello@onpardev.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} On PAR Dev. All rights reserved.</p>
+      <div class="footer-meta">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--neutral-900);
+    color: var(--neutral-300);
+    padding: var(--space-16) 0 var(--space-8);
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: var(--space-12);
+    padding-bottom: var(--space-12);
+    border-bottom: 1px solid var(--neutral-700);
+    margin-bottom: var(--space-8);
+  }
+  
+  .footer-logo .logo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--space-4);
+  }
+  
+  .footer-logo .name {
+    color: white;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  
+  .footer-logo .title {
+    color: var(--neutral-400);
+    font-size: 0.875rem;
+  }
+  
+  .footer-logo p {
+    color: var(--neutral-400);
+    max-width: 300px;
+  }
+  
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+  }
+  
+  .link-group h4 {
+    color: white;
+    margin-bottom: var(--space-4);
+    font-size: 1rem;
+  }
+  
+  .link-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .link-group a {
+    color: var(--neutral-400);
+    text-decoration: none;
+    transition: color var(--transition-fast) ease;
+  }
+  
+  .link-group a:hover {
+    color: white;
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    font-size: 0.875rem;
+  }
+  
+  .footer-meta {
+    display: flex;
+    gap: var(--space-6);
+  }
+  
+  .footer-meta a {
+    color: var(--neutral-400);
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color var(--transition-fast) ease;
+  }
+  
+  .footer-meta a:hover {
+    color: white;
+  }
+  
+  @media (max-width: 1024px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+    
+    .footer-logo {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-links {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8) var(--space-4);
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .footer-links {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

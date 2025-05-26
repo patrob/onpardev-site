@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+
+// Page metadata
+const title = "On PAR Dev | Software Consultants";
+const description = "Expert software consultants offering technical coaching, software delivery and strategic solutions to help your team excel.";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <Hero />
+  <Services />
+  <Contact />
+  <Footer />
+</Layout>

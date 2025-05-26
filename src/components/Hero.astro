@@ -1,0 +1,213 @@
+---
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="text-content animate-on-scroll">
+        <h1>Expert Software Solutions for Modern Challenges</h1>
+        <p class="subtitle">Helping teams deliver exceptional software through technical coaching, strategic consulting, and hands-on implementation.</p>
+        <div class="cta-buttons">
+          <a href="#contact" class="btn">Book a Consultation</a>
+          <a href="#services" class="btn-outline">See Services</a>
+        </div>
+      </div>
+      <div class="hero-image animate-on-scroll delay-200">
+        <img 
+          src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+          alt="Software team collaborating" 
+          width="600" 
+          height="400"
+        />
+      </div>
+    </div>
+    
+    <div class="clients animate-on-scroll delay-300">
+      <p>Trusted by forward-thinking companies</p>
+      <div class="client-logos">
+        <div class="logo">Company A</div>
+        <div class="logo">Company B</div>
+        <div class="logo">Company C</div>
+        <div class="logo">Company D</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hero-background"></div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    padding: var(--space-24) 0 var(--space-16);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(135deg, var(--primary-50) 0%, var(--secondary-50) 100%);
+    z-index: -1;
+  }
+  
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+    align-items: center;
+  }
+  
+  .text-content {
+    max-width: 540px;
+  }
+  
+  h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: var(--space-6);
+    background: linear-gradient(90deg, var(--primary-700), var(--secondary-700));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--neutral-700);
+    margin-bottom: var(--space-8);
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+  }
+  
+  .btn-outline {
+    display: inline-block;
+    padding: var(--space-3) var(--space-6);
+    border: 2px solid var(--primary-600);
+    color: var(--primary-600);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-normal) ease;
+    text-align: center;
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--primary-50);
+    border-color: var(--primary-700);
+    color: var(--primary-700);
+    transform: translateY(-2px);
+  }
+  
+  .hero-image {
+    position: relative;
+  }
+  
+  .hero-image img {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: perspective(1000px) rotateY(-5deg);
+    transition: transform var(--transition-normal) ease;
+  }
+  
+  .hero-image:hover img {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  
+  .clients {
+    margin-top: var(--space-16);
+    text-align: center;
+  }
+  
+  .clients p {
+    font-size: 0.875rem;
+    color: var(--neutral-500);
+    margin-bottom: var(--space-6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .client-logos {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-8);
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    color: var(--neutral-400);
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  
+  @media (max-width: 1024px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: 120px;
+    }
+    
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+    }
+    
+    .text-content {
+      max-width: 100%;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+    }
+    
+    .cta-buttons {
+      justify-content: center;
+    }
+    
+    .clients {
+      margin-top: var(--space-12);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 2rem;
+    }
+    
+    .subtitle {
+      font-size: 1.125rem;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    .btn, .btn-outline {
+      width: 100%;
+    }
+    
+    .client-logos {
+      gap: var(--space-4);
+    }
+  }
+</style>
