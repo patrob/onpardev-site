@@ -46,3 +46,27 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Deploying to Cloudflare Pages
+
+This project is configured for static hosting on [Cloudflare Pages](https://pages.cloudflare.com/).
+
+1. Install the [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/) if you have not already:
+
+   ```sh
+   npm install -g wrangler
+   ```
+
+2. Build the site locally:
+
+   ```sh
+   npm run build
+   ```
+
+3. Deploy the contents of `dist` to your Pages project:
+
+   ```sh
+   wrangler pages deploy ./dist --project-name <your-project-name>
+   ```
+
+Update `wrangler.toml` with your project name to simplify future deploys.
