@@ -8,9 +8,13 @@
     "build": "astro build",
     "preview": "astro preview",
     "start": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "playwright test"
   },
   "dependencies": {
     "astro": "^5.9.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.53.2"
   }
 }
