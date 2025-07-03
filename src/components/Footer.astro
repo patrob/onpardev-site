@@ -15,18 +15,9 @@ const currentYear = new Date().getFullYear();
       
       <div class="footer-links">
         <div class="link-group">
-          <h4>Services</h4>
+          <h4>Links</h4>
           <ul>
-            <li><a href="#services">Technical Coaching</a></li>
-            <li><a href="#services">Software Delivery</a></li>
-            <li><a href="#services">Architecture Design</a></li>
-          </ul>
-        </div>
-        
-        <div class="link-group">
-          <h4>About</h4>
-          <ul>
-            <li><a href="#about">Experience</a></li>
+            <li><a href="/blog">Blog</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -177,6 +168,12 @@ const currentYear = new Date().getFullYear();
   @media (max-width: 640px) {
     .footer-links {
       grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-links {
+      gap: var(--space-4);
     }
   }
 </style>
