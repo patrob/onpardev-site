@@ -4,15 +4,14 @@
 <section class="hero">
   <div class="container">
     <div class="hero-content">
-      <div class="text-content animate-on-scroll">
-        <h1>Expert Software Solutions for Modern Challenges</h1>
-        <p class="subtitle">Helping teams deliver exceptional software through technical coaching, strategic consulting, and hands-on implementation.</p>
+      <div class="text-content">
+        <h1>Independent Software Consulting</h1>
+        <p class="subtitle">Pragmatic guidance and hands-on help to move your projects forward.</p>
         <div class="cta-buttons">
           <a href="#contact" class="btn">Book a Consultation</a>
-          <a href="#services" class="btn-outline">See Services</a>
         </div>
       </div>
-      <div class="hero-image animate-on-scroll delay-200">
+      <div class="hero-image">
         <img 
           src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
           alt="Software team collaborating" 
@@ -152,18 +151,28 @@
     h1 {
       font-size: 2rem;
     }
-    
+
     .subtitle {
       font-size: 1.125rem;
     }
-    
+
     .cta-buttons {
       flex-direction: column;
       width: 100%;
     }
-    
+
     .btn, .btn-outline {
       width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      padding-top: 100px;
+    }
+
+    .hero-image {
+      margin-top: var(--space-6);
     }
   }
 </style>
