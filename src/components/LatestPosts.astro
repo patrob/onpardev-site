@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog'))
+  .sort((a,b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0,3);
+const formatDate = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric'});
+---
+
+<section id="latest" class="latest-posts">
+  <div class="container">
+    <h2>Latest Posts</h2>
+    <div class="posts">
+      {posts.map(post => (
+        <article class="post-preview">
+          <h3><a href={`/blog/${post.slug}`}>{post.data.title}</a></h3>
+          <p class="post-date">{formatDate(post.data.date)}</p>
+        </article>
+      ))}
+    </div>
+    <p class="all-posts"><a class="btn" href="/blog">View all posts</a></p>
+  </div>
+</section>
+
+<style>
+.latest-posts {
+  background-color: var(--neutral-50);
+}
+.posts {
+  display: grid;
+  gap: var(--space-6);
+}
+.post-preview {
+  background: white;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+.post-date {
+  color: var(--neutral-600);
+  font-size: 0.875rem;
+}
+.all-posts {
+  text-align: center;
+  margin-top: var(--space-6);
+}
+</style>

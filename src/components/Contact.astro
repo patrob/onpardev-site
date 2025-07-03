@@ -83,22 +83,6 @@
             <input type="email" id="email" name="email" required />
           </div>
           
-          <div class="form-group">
-            <label for="company">Company (optional)</label>
-            <input type="text" id="company" name="company" />
-          </div>
-          
-          <div class="form-group">
-            <label for="service">Service Interested In</label>
-            <select id="service" name="service" required>
-              <option value="" disabled selected>Select a service</option>
-              <option value="technical-coaching">Technical Coaching</option>
-              <option value="software-delivery">Software Delivery</option>
-              <option value="architecture-design">Architecture Design</option>
-              <option value="agile-transformation">Agile Transformation</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
           
           <div class="form-group full-width">
             <label for="message">Message</label>
@@ -213,7 +197,7 @@
   
   .contact-form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--space-6);
   }
   
@@ -271,9 +255,19 @@
     .contact-form {
       grid-template-columns: 1fr;
     }
-    
+
     .contact-form .btn {
       width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-grid {
+      gap: var(--space-6);
+    }
+
+    .contact-form-container {
+      padding: var(--space-6);
     }
   }
 </style>
