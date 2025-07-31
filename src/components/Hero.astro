@@ -13,12 +13,25 @@
         </div>
       </div>
       <div class="hero-image">
-        <img 
-          src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-          alt="Software team collaborating" 
-          width="600" 
-          height="400"
-        />
+        <div class="hero-visual">
+          <div class="code-window">
+            <div class="window-header">
+              <div class="window-controls">
+                <span class="control red"></span>
+                <span class="control yellow"></span>
+                <span class="control green"></span>
+              </div>
+              <div class="window-title">software-consulting.js</div>
+            </div>
+            <div class="code-content">
+              <div class="code-line"><span class="keyword">const</span> <span class="variable">consulting</span> = &#123;</div>
+              <div class="code-line">  <span class="property">expertise</span>: <span class="string">'architecture'</span>,</div>
+              <div class="code-line">  <span class="property">delivery</span>: <span class="string">'on-time'</span>,</div>
+              <div class="code-line">  <span class="property">results</span>: <span class="string">'guaranteed'</span></div>
+              <div class="code-line">&#125;;</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -103,20 +116,94 @@
   
   .hero-image {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
-  .hero-image img {
+  .hero-visual {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .code-window {
+    background: var(--text-900);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-lg);
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    overflow: hidden;
     transform: perspective(1000px) rotateY(-5deg);
     transition: transform var(--transition-normal) ease;
   }
   
-  .hero-image:hover img {
+  .code-window:hover {
     transform: perspective(1000px) rotateY(0deg);
+  }
+  
+  .window-header {
+    background: var(--text-800);
+    padding: var(--space-3) var(--space-4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--text-700);
+  }
+  
+  .window-controls {
+    display: flex;
+    gap: var(--space-2);
+  }
+  
+  .control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  
+  .control.red {
+    background: #ff5f57;
+  }
+  
+  .control.yellow {
+    background: #ffbd2e;
+  }
+  
+  .control.green {
+    background: #28ca42;
+  }
+  
+  .window-title {
+    color: var(--base-300);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  .code-content {
+    padding: var(--space-6);
+    font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+  
+  .code-line {
+    color: var(--base-200);
+    margin-bottom: var(--space-2);
+  }
+  
+  .keyword {
+    color: var(--secondary-400);
+    font-weight: 600;
+  }
+  
+  .variable {
+    color: var(--primary-300);
+  }
+  
+  .property {
+    color: var(--accent-400);
+  }
+  
+  .string {
+    color: var(--primary-200);
   }
   
   @media (max-width: 1024px) {
