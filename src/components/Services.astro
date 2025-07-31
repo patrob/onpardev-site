@@ -67,7 +67,7 @@ const services = [
   }
   
   h2 {
-    color: var(--neutral-900);
+    color: var(--text-900);
     margin-bottom: var(--space-4);
     position: relative;
     display: inline-block;
@@ -81,12 +81,12 @@ const services = [
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary-500), var(--secondary-500));
+    background: linear-gradient(90deg, var(--primary-500), var(--accent-500), var(--secondary-500));
     border-radius: var(--radius-full);
   }
   
   .section-description {
-    color: var(--neutral-600);
+    color: var(--text-600);
     font-size: 1.125rem;
   }
   
@@ -105,7 +105,7 @@ const services = [
     transition: transform var(--transition-normal) ease, box-shadow var(--transition-normal) ease;
     position: relative;
     overflow: hidden;
-    border: 1px solid var(--neutral-200);
+    border: 1px solid var(--base-200);
   }
   
   .service-card:hover {
@@ -120,7 +120,7 @@ const services = [
     left: 0;
     width: 4px;
     height: 100%;
-    background: linear-gradient(to bottom, var(--primary-500), var(--secondary-500));
+    background: linear-gradient(to bottom, var(--primary-500), var(--accent-500));
     opacity: 0;
     transition: opacity var(--transition-normal) ease;
   }
@@ -135,12 +135,12 @@ const services = [
   }
   
   h3 {
-    color: var(--neutral-900);
+    color: var(--text-900);
     margin-bottom: var(--space-3);
   }
   
   .service-card p {
-    color: var(--neutral-600);
+    color: var(--text-600);
     margin-bottom: var(--space-4);
   }
   
@@ -154,14 +154,14 @@ const services = [
     padding-left: var(--space-6);
     position: relative;
     margin-bottom: var(--space-2);
-    color: var(--neutral-700);
+    color: var(--text-700);
   }
   
   .benefits li::before {
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--primary-500);
+    color: var(--accent-600);
     font-weight: bold;
   }
   
@@ -178,7 +178,7 @@ const services = [
   }
   
   .custom-solutions {
-    background-color: var(--primary-50);
+    background: linear-gradient(135deg, var(--primary-50), var(--accent-50));
     border-radius: var(--radius-lg);
     padding: var(--space-8);
     display: flex;
@@ -186,6 +186,7 @@ const services = [
     align-items: center;
     flex-wrap: wrap;
     gap: var(--space-6);
+    border: 1px solid var(--base-200);
   }
   
   .custom-content {

@@ -5,10 +5,11 @@
   <div class="container">
     <div class="hero-content">
       <div class="text-content">
-        <h1>Independent Software Consulting</h1>
-        <p class="subtitle">Pragmatic guidance and hands-on help to move your projects forward.</p>
+        <h1>Expert Software Consulting That Delivers Results</h1>
+        <p class="subtitle">Transform your technical challenges into competitive advantages with proven expertise in architecture, development, and team coaching.</p>
         <div class="cta-buttons">
-          <a href="#contact" class="btn">Book a Consultation</a>
+          <a href="#contact" class="btn">Book a Free Consultation</a>
+          <a href="#services" class="btn-outline">Explore Services</a>
         </div>
       </div>
       <div class="hero-image">
@@ -42,7 +43,7 @@
     width: 100%;
     height: 100%;
     background-image: 
-      linear-gradient(135deg, var(--primary-50) 0%, var(--secondary-50) 100%);
+      linear-gradient(135deg, var(--base-50) 0%, var(--primary-50) 50%, var(--accent-50) 100%);
     z-index: -1;
   }
   
@@ -61,7 +62,7 @@
     font-size: 3.5rem;
     line-height: 1.1;
     margin-bottom: var(--space-6);
-    background: linear-gradient(90deg, var(--primary-700), var(--secondary-700));
+    background: linear-gradient(90deg, var(--text-900), var(--primary-700), var(--accent-700));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -70,7 +71,7 @@
   .subtitle {
     font-size: 1.25rem;
     line-height: 1.5;
-    color: var(--neutral-700);
+    color: var(--text-700);
     margin-bottom: var(--space-8);
   }
   
@@ -97,6 +98,7 @@
     border-color: var(--primary-700);
     color: var(--primary-700);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
   }
   
   .hero-image {
