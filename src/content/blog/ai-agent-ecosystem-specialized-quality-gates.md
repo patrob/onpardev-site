@@ -1,7 +1,7 @@
 ---
 title: "AI Agent Specialization Enterprise: Quality-Driven Results"
 description: "Specialized AI agents with quality gates deliver 90% fewer revisions and 10x ROI. Learn how enterprise leaders transform operations with intelligent automation."
-pubDate: 2025-08-01
+date: "2025-08-01"
 author: "On Par Development"
 tags: ["AI agent specialization enterprise", "AI quality management", "intelligent automation consulting", "enterprise AI workflow", "AI agents", "business automation"]
 image: "/blog/ai-agent-ecosystem.jpg"
