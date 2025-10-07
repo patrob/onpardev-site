@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog')).sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
@@ -11,37 +12,103 @@ const formatDate = (dateStr) => {
 ---
 
 <Layout title="Blog">
-  <section class="container">
-    <h1>Blog</h1>
-    <div class="posts">
-      {posts.map(post => (
-        <article class="post-preview">
-          <h2><a href={`/blog/${post.slug}`}>{post.data.title}</a></h2>
-          <p class="post-date">{formatDate(post.data.date)}</p>
-          <p>{post.data.description}</p>
-          <a class="btn" href={`/blog/${post.slug}`}>Read more</a>
-        </article>
-      ))}
+  <section class="blog-section">
+    <div class="container">
+      <h1>Blog</h1>
+      <div class="posts">
+        {posts.map(post => (
+          <article class="post-preview">
+            <h2><a href={`/blog/${post.slug}`}>{post.data.title}</a></h2>
+            <p class="post-date">{formatDate(post.data.date)}</p>
+            <p>{post.data.description}</p>
+            <a class="btn" href={`/blog/${post.slug}`}>Read more</a>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
+  <Footer />
 </Layout>
 
 <style>
+.blog-section {
+  padding: 160px 0 var(--space-24);
+  min-height: calc(100vh - 400px);
+  background-color: white;
+}
+
+.blog-section h1 {
+  text-align: center;
+  margin-bottom: var(--space-12);
+  font-size: 3rem;
+}
+
 .posts {
   display: grid;
   gap: var(--space-8);
+  max-width: 900px;
+  margin: 0 auto;
 }
+
 .post-preview {
   background: white;
-  padding: var(--space-6);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
+  padding: var(--space-8);
+  border-radius: 12px;
+  border: 1px solid var(--base-200);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.post-preview:hover {
+  transform: translateY(-2px);
+  border-color: var(--base-300);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
+}
+
 .post-preview h2 {
   margin-top: 0;
-}
-.post-date {
-  color: var(--neutral-600);
   margin-bottom: var(--space-4);
+  font-size: 1.75rem;
+}
+
+.post-preview h2 a {
+  color: var(--text-900);
+  transition: color 200ms ease;
+}
+
+.post-preview h2 a:hover {
+  color: var(--primary-600);
+}
+
+.post-preview p {
+  color: var(--text-600);
+  line-height: 1.7;
+}
+
+.post-date {
+  color: var(--text-500);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .blog-section {
+    padding-top: 140px;
+  }
+
+  .blog-section h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-section {
+    padding-top: 120px;
+  }
+
+  .blog-section h1 {
+    font-size: 2rem;
+  }
 }
 </style>
