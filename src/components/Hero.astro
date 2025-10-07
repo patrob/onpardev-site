@@ -1,4 +1,5 @@
 ---
+import Button from './Button.astro';
 ---
 
 <section class="hero">
@@ -8,8 +9,8 @@
         <h1>Expert Software Consulting That Delivers Results</h1>
         <p class="subtitle">Transform your technical challenges into competitive advantages with proven expertise in architecture, development, and team coaching.</p>
         <div class="cta-buttons">
-          <a href="#contact" class="btn">Book a Free Consultation</a>
-          <a href="#services" class="btn-outline">Explore Services</a>
+          <Button href="#contact">Book a Free Consultation</Button>
+          <Button href="#services" variant="secondary">Explore Services</Button>
         </div>
       </div>
       <div class="hero-image">
@@ -42,76 +43,60 @@
 <style>
   .hero {
     position: relative;
-    padding: var(--space-24) 0 var(--space-16);
+    padding: 160px 0 0;
     min-height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
+    background: linear-gradient(180deg, #FAFAFA 0%, #FFFFFF 100%);
   }
-  
+
   .hero-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
-      linear-gradient(135deg, var(--base-50) 0%, var(--primary-50) 50%, var(--accent-50) 100%);
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 40% 20%, rgba(20, 184, 166, 0.06) 0%, transparent 50%);
     z-index: -1;
   }
   
   .hero-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-8);
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--space-12);
     align-items: center;
   }
-  
+
   .text-content {
-    max-width: 540px;
+    max-width: 620px;
   }
-  
+
   h1 {
-    font-size: 3.5rem;
-    line-height: 1.1;
-    margin-bottom: var(--space-6);
-    background: linear-gradient(90deg, var(--text-900), var(--primary-700), var(--accent-700));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  
-  .subtitle {
-    font-size: 1.25rem;
-    line-height: 1.5;
-    color: var(--text-700);
+    font-size: 4.5rem;
+    line-height: 1.05;
     margin-bottom: var(--space-8);
+    color: var(--text-900);
+    font-weight: 800;
+    letter-spacing: -0.045em;
   }
-  
+
+  .subtitle {
+    font-size: 1.3125rem;
+    line-height: 1.6;
+    color: var(--text-600);
+    margin-bottom: var(--space-10);
+    font-weight: 400;
+  }
+
   .cta-buttons {
     display: flex;
     gap: var(--space-4);
     margin-bottom: var(--space-8);
-  }
-  
-  .btn-outline {
-    display: inline-block;
-    padding: var(--space-3) var(--space-6);
-    border: 2px solid var(--primary-600);
-    color: var(--primary-600);
-    border-radius: var(--radius-md);
-    font-weight: 500;
-    cursor: pointer;
-    transition: all var(--transition-normal) ease;
-    text-align: center;
-  }
-  
-  .btn-outline:hover {
-    background-color: var(--primary-50);
-    border-color: var(--primary-700);
-    color: var(--primary-700);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    flex-wrap: wrap;
   }
   
   .hero-image {
@@ -128,15 +113,19 @@
   
   .code-window {
     background: var(--text-900);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.2),
+      0 4px 8px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
     overflow: hidden;
-    transform: perspective(1000px) rotateY(-5deg);
-    transition: transform var(--transition-normal) ease;
+    transform: perspective(1200px) rotateY(-3deg) rotateX(2deg);
+    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   .code-window:hover {
-    transform: perspective(1000px) rotateY(0deg);
+    transform: perspective(1200px) rotateY(0deg) rotateX(0deg) translateY(-4px);
   }
   
   .window-header {
@@ -208,37 +197,32 @@
   
   @media (max-width: 1024px) {
     h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
     }
-  }
-  
-  @media (max-width: 768px) {
-    .hero {
-      padding-top: 120px;
-    }
-    
+
     .hero-content {
-      grid-template-columns: 1fr;
       gap: var(--space-10);
     }
-    
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: 140px;
+      padding-bottom: 80px;
+    }
+
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: var(--space-12);
+    }
+
     .text-content {
       max-width: 100%;
       text-align: center;
     }
-    
+
     h1 {
-      font-size: 2.5rem;
-    }
-    
-    .cta-buttons {
-      justify-content: center;
-    }
-  }
-  
-  @media (max-width: 640px) {
-    h1 {
-      font-size: 2rem;
+      font-size: 3rem;
     }
 
     .subtitle {
@@ -246,22 +230,41 @@
     }
 
     .cta-buttons {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      font-size: 1.0625rem;
+    }
+
+    .cta-buttons {
       flex-direction: column;
       width: 100%;
     }
 
-    .btn, .btn-outline {
+    .cta-buttons :global(.button) {
       width: 100%;
     }
   }
 
   @media (max-width: 480px) {
     .hero {
-      padding-top: 100px;
+      padding-top: 120px;
+      padding-bottom: 60px;
+    }
+
+    h1 {
+      font-size: 2rem;
     }
 
     .hero-image {
-      margin-top: var(--space-6);
+      margin-top: var(--space-4);
     }
   }
 </style>

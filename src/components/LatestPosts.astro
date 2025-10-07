@@ -23,24 +23,72 @@ const formatDate = (d) => new Date(d).toLocaleDateString('en-US', { year: 'numer
 
 <style>
 .latest-posts {
-  background-color: var(--neutral-50);
+  background-color: #FAFAFA;
+  border-top: 1px solid var(--base-200);
+  border-bottom: 1px solid var(--base-200);
 }
+
+.latest-posts h2 {
+  text-align: center;
+  margin-bottom: var(--space-12);
+  font-size: 2.5rem;
+}
+
 .posts {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--space-6);
+  margin-bottom: var(--space-10);
 }
+
 .post-preview {
   background: white;
-  padding: var(--space-4);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  padding: var(--space-8);
+  border-radius: 12px;
+  border: 1px solid var(--base-200);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.post-preview:hover {
+  transform: translateY(-2px);
+  border-color: var(--base-300);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
+}
+
+.post-preview h3 {
+  margin-bottom: var(--space-3);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.post-preview h3 a {
+  color: var(--text-900);
+  transition: color 200ms ease;
+}
+
+.post-preview h3 a:hover {
+  color: var(--primary-600);
+}
+
 .post-date {
-  color: var(--neutral-600);
+  color: var(--text-500);
   font-size: 0.875rem;
+  font-weight: 500;
 }
+
 .all-posts {
   text-align: center;
-  margin-top: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 768px) {
+  .latest-posts h2 {
+    font-size: 2rem;
+  }
+
+  .posts {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

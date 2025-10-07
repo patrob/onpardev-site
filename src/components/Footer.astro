@@ -25,10 +25,11 @@ const currentYear = new Date().getFullYear();
         <div class="link-group">
           <h4>Connect</h4>
           <ul>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="mailto:hello@onpardev.com">Email</a></li>
+            <li><a href="https://linkedin.com/in/patrick-robinson-dev" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://x.com/patrobdev" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+            <li><a href="https://github.com/on-par" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.youtube.com/patrickarobinson" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+            <li><a href="https://instagram.com/patrobdev" target="_blank" rel="noopener noreferrer">Instagram</a></li>
           </ul>
         </div>
       </div>
@@ -46,40 +47,45 @@ const currentYear = new Date().getFullYear();
 
 <style>
   .footer {
-    background-color: var(--neutral-900);
-    color: var(--neutral-300);
-    padding: var(--space-16) 0 var(--space-8);
+    background-color: #0F172A;
+    color: var(--base-400);
+    padding: var(--space-20) 0 var(--space-10);
+    border-top: 1px solid rgba(226, 232, 240, 0.1);
   }
-  
+
   .footer-content {
     display: grid;
     grid-template-columns: 1.5fr 2fr;
-    gap: var(--space-12);
+    gap: var(--space-16);
     padding-bottom: var(--space-12);
-    border-bottom: 1px solid var(--neutral-700);
-    margin-bottom: var(--space-8);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.1);
+    margin-bottom: var(--space-10);
   }
   
   .footer-logo .logo {
     display: flex;
     flex-direction: column;
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-6);
   }
-  
+
   .footer-logo .name {
     color: white;
-    font-weight: 600;
-    font-size: 1.25rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    letter-spacing: -0.02em;
   }
-  
+
   .footer-logo .title {
-    color: var(--neutral-400);
+    color: var(--base-400);
     font-size: 0.875rem;
+    font-weight: 500;
   }
-  
+
   .footer-logo p {
-    color: var(--neutral-400);
-    max-width: 300px;
+    color: var(--base-400);
+    max-width: 320px;
+    font-size: 0.9375rem;
+    line-height: 1.6;
   }
   
   .footer-links {
@@ -90,25 +96,29 @@ const currentYear = new Date().getFullYear();
   
   .link-group h4 {
     color: white;
-    margin-bottom: var(--space-4);
-    font-size: 1rem;
+    margin-bottom: var(--space-5);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
   }
-  
+
   .link-group ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: var(--space-2);
+    gap: var(--space-3);
   }
-  
+
   .link-group a {
-    color: var(--neutral-400);
+    color: var(--base-400);
     text-decoration: none;
-    transition: color var(--transition-fast) ease;
+    transition: color 200ms ease;
+    font-size: 0.9375rem;
   }
-  
+
   .link-group a:hover {
     color: white;
   }
@@ -118,26 +128,27 @@ const currentYear = new Date().getFullYear();
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: var(--space-4);
+    gap: var(--space-6);
   }
-  
+
   .footer-bottom p {
     margin: 0;
     font-size: 0.875rem;
+    color: var(--base-500);
   }
-  
+
   .footer-meta {
     display: flex;
-    gap: var(--space-6);
+    gap: var(--space-8);
   }
-  
+
   .footer-meta a {
-    color: var(--neutral-400);
+    color: var(--base-400);
     font-size: 0.875rem;
     text-decoration: none;
-    transition: color var(--transition-fast) ease;
+    transition: color 200ms ease;
   }
-  
+
   .footer-meta a:hover {
     color: white;
   }
