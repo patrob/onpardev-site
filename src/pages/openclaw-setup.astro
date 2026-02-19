@@ -178,12 +178,14 @@ const description = "Get a personal AI assistant system running on your own hard
   .page {
     padding-top: 80px;
     padding-bottom: var(--space-24);
+    overflow-x: hidden;
   }
 
   .container {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 var(--space-6);
+    box-sizing: border-box;
   }
 
   .hero-section {
@@ -611,8 +613,26 @@ const description = "Get a personal AI assistant system running on your own hard
   }
 
   @media (max-width: 768px) {
+    .hero-section {
+      padding: var(--space-10) 0 var(--space-8);
+    }
+
     .hero-section h1 {
-      font-size: 2.25rem;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      max-width: 100%;
+    }
+
+    .hero-btn {
+      font-size: 1rem;
+      padding: 0.875rem 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.625rem;
     }
 
     .features-grid {
@@ -627,9 +647,26 @@ const description = "Get a personal AI assistant system running on your own hard
       grid-template-columns: 1fr;
     }
 
+    .steps li {
+      gap: var(--space-4);
+    }
+
     .contact-methods {
       flex-direction: column;
-      align-items: center;
+      align-items: stretch;
+      gap: var(--space-4);
+    }
+
+    .contact-methods .btn {
+      text-align: center;
+    }
+
+    .disclaimer {
+      padding: var(--space-6);
+    }
+
+    section {
+      margin-bottom: var(--space-10);
     }
   }
 </style>
