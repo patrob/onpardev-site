@@ -17,6 +17,13 @@ const services = [
     description: "Create robust, scalable software architectures that align with your business goals and technical requirements.",
     icon: "🏛️",
     benefits: ["Future-proof solutions", "Scalable systems", "Reduced technical debt", "Clear documentation"]
+  },
+  {
+    title: "AI Agent Setup",
+    description: "Get a personal AI assistant system running on your own hardware. Always on, private, and under your control.",
+    icon: "🤖",
+    benefits: ["Runs on your Mac Mini or laptop", "Private and local by default", "Connects to Telegram, Discord, etc.", "Custom agents for your workflow"],
+    link: "/openclaw-setup"
   }
 ];
 ---
@@ -39,7 +46,7 @@ const services = [
               <li>{benefit}</li>
             ))}
           </ul>
-          <a href="#contact" class="learn-more">Learn more</a>
+          <a href={service.link || "#contact"} class="learn-more">Learn more</a>
         </div>
       ))}
     </div>
@@ -82,7 +89,7 @@ const services = [
   
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: var(--space-8);
     margin-bottom: var(--space-16);
   }
@@ -188,7 +195,7 @@ const services = [
     line-height: 1.7;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     .services-grid {
       grid-template-columns: 1fr;
       gap: var(--space-6);
