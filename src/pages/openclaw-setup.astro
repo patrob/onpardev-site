@@ -1,0 +1,635 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "AI Agent Setup | On PAR Dev";
+const description = "Get a personal AI assistant system running on your own hardware. Always on, private, and fully yours.";
+---
+
+<Layout title={title} description={description}>
+  <main class="page">
+    <div class="container">
+
+      <section class="hero-section">
+        <h1>Your Own AI Agent System</h1>
+        <p class="subtitle">
+          Imagine waking up to a briefing that already knows your schedule, your inbox, and what needs your attention today. A personal AI assistant that runs 24/7 on your hardware, talks to you through the apps you already use, and never shares your data with anyone.
+        </p>
+        <a href="#contact" class="btn hero-btn">Book a Free Discovery Call</a>
+      </section>
+
+      <section class="what-you-get">
+        <h2>What You Get</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <span class="feature-icon">💻</span>
+            <h3>Runs on Your Hardware</h3>
+            <p>Your laptop, a mini PC, or a cloud VPS. Your data stays where you put it.</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">💬</span>
+            <h3>Chat From Anywhere</h3>
+            <p>Talk to your assistant through Telegram, Discord, or Signal. No special app needed.</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">📅</span>
+            <h3>Calendar + Email Awareness</h3>
+            <p>It knows your schedule, can check your inbox, and gives you a morning briefing every day.</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">🔒</span>
+            <h3>Private by Default</h3>
+            <p>No cloud dependency for your personal data. Local AI models available for zero-cost operation.</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">🛠️</span>
+            <h3>Customized to You</h3>
+            <p>Configured for your workflow, your tools, your preferences. Not a one-size-fits-all chatbot.</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">🖥️</span>
+            <h3>No Hardware? No Problem</h3>
+            <p>Don't have a dedicated machine? I can recommend hardware, help you procure it, or set you up on a cloud VPS.</p>
+          </div>
+          <div class="feature">
+            <span class="feature-icon">📚</span>
+            <h3>Walkthrough + Documentation</h3>
+            <p>You'll understand how it works. I walk you through the system and leave you with clear docs.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="how-it-works">
+        <h2>How It Works</h2>
+        <ol class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <div>
+              <h3>Discovery Call (Free)</h3>
+              <p>We talk about your workflow, what's eating your time, and what you'd want an AI assistant to handle. I'll tell you honestly if this is a good fit. Not everyone needs this, and that's fine.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <div>
+              <h3>Scoping + Quote</h3>
+              <p>Based on what we discussed, I'll send you a clear scope and price. No mystery fees, no hourly surprises. You'll know exactly what you're getting before we start.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <div>
+              <h3>Setup + Configuration</h3>
+              <p>I build your system, connect your tools, and configure everything to match what we agreed on. You'll have a working assistant by the end of the session.</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-num">4</span>
+            <div>
+              <h3>Walkthrough + Handoff</h3>
+              <p>Live walkthrough so you understand your system inside and out. Plus written documentation so you're never stuck. This is yours to own and customize from here.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="pricing">
+        <h2>Investment</h2>
+        <p class="pricing-intro">Every setup is different because every workflow is different. We'll figure out what you actually need on a discovery call, then I'll scope it and quote it. No surprises.</p>
+        <div class="pricing-anchor">
+          <p class="anchor-text">Engagements typically start at <strong>$250</strong> for a focused setup and go up based on complexity, integrations, and how customized you want your system.</p>
+        </div>
+        <div class="value-examples">
+          <h3>What that looks like in practice</h3>
+          <div class="example-grid">
+            <div class="example">
+              <span class="example-label">Simple</span>
+              <p>OpenClaw on your hardware, one messaging channel, calendar-aware morning briefing. You're up and running in a session.</p>
+            </div>
+            <div class="example">
+              <span class="example-label">Custom</span>
+              <p>Multiple channels, email triage, custom agent personas tuned to your workflow, local AI models for privacy, scheduled reports. The works.</p>
+            </div>
+            <div class="example">
+              <span class="example-label">Ongoing</span>
+              <p>Need help after setup? Hourly support available for tweaks, new integrations, or training your team.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-cta">
+          <a href="#contact" class="btn">Book a Discovery Call</a>
+        </div>
+      </section>
+
+      <section class="fit-section">
+        <h2>Is This Right for You?</h2>
+        <div class="fit-grid">
+          <div class="fit-card good">
+            <h3>Great fit if you...</h3>
+            <ul>
+              <li>Spend time on repetitive daily tasks (calendar, email, scheduling)</li>
+              <li>Value privacy and want your data under your control</li>
+              <li>Have hardware you can dedicate to it (or want help picking some)</li>
+              <li>Are comfortable learning new tools (you don't need to code)</li>
+              <li>Want a system you own, not another subscription</li>
+            </ul>
+          </div>
+          <div class="fit-card not">
+            <h3>Probably not a fit if you...</h3>
+            <ul>
+              <li>Want a polished consumer app with zero learning curve</li>
+              <li>Need enterprise-grade uptime guarantees</li>
+              <li>Aren't willing to experiment with beta software</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="disclaimer">
+        <h2>Important Notes</h2>
+        <div class="disclaimer-content">
+          <p><strong>OpenClaw is open-source beta software.</strong> I'll set it up and configure it for you, but I didn't build OpenClaw itself. Here's what you should know:</p>
+          <ul>
+            <li>OpenClaw is under active development. Updates may occasionally require reconfiguration.</li>
+            <li>This service covers initial setup and configuration. Ongoing maintenance is your responsibility (though I'm happy to help on an hourly basis if needed).</li>
+            <li>AI models (cloud or local) may incur their own costs depending on your usage and provider choices.</li>
+            <li>You're responsible for your own API keys, accounts, and any data you give the system access to.</li>
+            <li>No guarantees of uptime, accuracy, or fitness for any particular purpose. This is a power-user tool, not a consumer product (yet).</li>
+            <li>By purchasing this service, you acknowledge that you use OpenClaw at your own risk.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <h2>Start With a Conversation</h2>
+        <p>No pitch, no pressure. Tell me what's eating your time, and I'll tell you if I can help. If it's not a fit, I'll say so.</p>
+        <div class="contact-methods">
+          <a href="mailto:patrick@onpardev.com" class="btn">📧 patrick@onpardev.com</a>
+          <a href="https://linkedin.com/in/patrick-robinson-dev" target="_blank" class="btn btn-secondary">💼 Connect on LinkedIn</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .page {
+    padding-top: 80px;
+    padding-bottom: var(--space-24);
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+  }
+
+  .hero-section {
+    text-align: center;
+    padding: var(--space-16) 0 var(--space-12);
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--base-100);
+    color: var(--text-700);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding: 0.375rem 1rem;
+    border-radius: 999px;
+    margin-bottom: var(--space-6);
+    border: 1px solid var(--base-200);
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    color: var(--text-900);
+    margin-bottom: var(--space-6);
+    line-height: 1.15;
+  }
+
+  .subtitle {
+    font-size: 1.1875rem;
+    color: var(--text-600);
+    line-height: 1.7;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  section {
+    margin-bottom: var(--space-16);
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: var(--text-900);
+    margin-bottom: var(--space-8);
+    text-align: center;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+
+  .feature {
+    padding: var(--space-8);
+    border: 1px solid var(--base-200);
+    border-radius: 12px;
+    background: white;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+  }
+
+  .feature:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+  }
+
+  .feature-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: var(--space-4);
+  }
+
+  .feature h3 {
+    font-size: 1.125rem;
+    color: var(--text-900);
+    margin-bottom: var(--space-3);
+  }
+
+  .feature p {
+    font-size: 0.9375rem;
+    color: var(--text-600);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .steps {
+    list-style: none;
+    padding: 0;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .steps li {
+    display: flex;
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+    align-items: flex-start;
+  }
+
+  .step-num {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: var(--text-900);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+
+  .steps h3 {
+    font-size: 1.125rem;
+    color: var(--text-900);
+    margin-bottom: var(--space-2);
+  }
+
+  .steps p {
+    font-size: 0.9375rem;
+    color: var(--text-600);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .pricing-card {
+    border: 1px solid var(--base-200);
+    border-radius: 12px;
+    padding: var(--space-10);
+    background: white;
+    text-align: center;
+    position: relative;
+  }
+
+  .pricing-card.featured {
+    border-color: var(--text-900);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text-900);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+  }
+
+  .pricing-card h3 {
+    font-size: 1.375rem;
+    color: var(--text-900);
+    margin-bottom: var(--space-4);
+  }
+
+  .price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-900);
+    margin-bottom: var(--space-2);
+  }
+
+  .price-note {
+    font-size: 0.875rem;
+    color: var(--text-500);
+    margin-bottom: var(--space-6);
+  }
+
+  .pricing-card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: var(--space-8);
+  }
+
+  .pricing-card li {
+    padding: var(--space-2) 0;
+    padding-left: var(--space-6);
+    position: relative;
+    font-size: 0.9375rem;
+    color: var(--text-700);
+  }
+
+  .pricing-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--text-900);
+    font-weight: 700;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--text-900);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    transition: opacity 200ms ease;
+  }
+
+  .btn:hover {
+    opacity: 0.85;
+  }
+
+  .disclaimer {
+    background: var(--base-50);
+    border: 1px solid var(--base-200);
+    border-radius: 12px;
+    padding: var(--space-10);
+  }
+
+  .disclaimer h2 {
+    text-align: left;
+    font-size: 1.375rem;
+    margin-bottom: var(--space-4);
+  }
+
+  .disclaimer-content p {
+    font-size: 0.9375rem;
+    color: var(--text-600);
+    line-height: 1.7;
+    margin-bottom: var(--space-4);
+  }
+
+  .disclaimer-content ul {
+    padding-left: var(--space-6);
+    margin: 0;
+  }
+
+  .disclaimer-content li {
+    font-size: 0.875rem;
+    color: var(--text-600);
+    line-height: 1.7;
+    margin-bottom: var(--space-2);
+  }
+
+  .contact-section {
+    text-align: center;
+    padding: var(--space-12) 0;
+  }
+
+  .contact-section p {
+    font-size: 1.0625rem;
+    color: var(--text-600);
+    margin-bottom: var(--space-8);
+  }
+
+  .contact-methods {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-8);
+    flex-wrap: wrap;
+  }
+
+  .hero-btn {
+    margin-top: var(--space-8);
+    font-size: 1.0625rem;
+    padding: 1rem 2rem;
+  }
+
+  .pricing-intro {
+    text-align: center;
+    font-size: 1.0625rem;
+    color: var(--text-600);
+    line-height: 1.7;
+    max-width: 640px;
+    margin: 0 auto var(--space-8);
+  }
+
+  .pricing-anchor {
+    text-align: center;
+    margin-bottom: var(--space-10);
+  }
+
+  .anchor-text {
+    font-size: 1.125rem;
+    color: var(--text-700);
+    line-height: 1.7;
+  }
+
+  .anchor-text strong {
+    font-size: 1.5rem;
+    color: var(--text-900);
+  }
+
+  .value-examples h3 {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--text-900);
+    margin-bottom: var(--space-6);
+  }
+
+  .example-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+  }
+
+  .example {
+    padding: var(--space-6);
+    border: 1px solid var(--base-200);
+    border-radius: 12px;
+    background: white;
+  }
+
+  .example-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-500);
+    margin-bottom: var(--space-3);
+  }
+
+  .example p {
+    font-size: 0.9375rem;
+    color: var(--text-600);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .pricing-cta {
+    text-align: center;
+  }
+
+  .fit-section {
+    margin-bottom: var(--space-16);
+  }
+
+  .fit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  .fit-card {
+    padding: var(--space-8);
+    border-radius: 12px;
+    border: 1px solid var(--base-200);
+  }
+
+  .fit-card.good {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+  }
+
+  .fit-card.not {
+    background: var(--base-50);
+  }
+
+  .fit-card h3 {
+    font-size: 1.125rem;
+    color: var(--text-900);
+    margin-bottom: var(--space-4);
+  }
+
+  .fit-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .fit-card li {
+    padding: var(--space-2) 0;
+    padding-left: var(--space-6);
+    position: relative;
+    font-size: 0.9375rem;
+    color: var(--text-700);
+    line-height: 1.6;
+  }
+
+  .fit-card.good li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #16a34a;
+    font-weight: 700;
+  }
+
+  .fit-card.not li::before {
+    content: '✗';
+    position: absolute;
+    left: 0;
+    color: var(--text-400);
+    font-weight: 700;
+  }
+
+  .btn-secondary {
+    background: white;
+    color: var(--text-900);
+    border: 2px solid var(--base-300);
+  }
+
+  .btn-secondary:hover {
+    background: var(--base-50);
+    opacity: 1;
+  }
+
+  .contact-link {
+    font-size: 1.0625rem;
+    color: var(--text-900);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 200ms ease;
+  }
+
+  .contact-link:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2.25rem;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .example-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .fit-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-methods {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
